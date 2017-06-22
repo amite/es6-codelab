@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "ES6 Codelab",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "Who's afraid of Modern Javascript?",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",

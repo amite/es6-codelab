@@ -1,8 +1,14 @@
-# Spectacle Boilerplate
+# ES6 Codelab
+
+## Master the fundamentals of Modern Javascript
+
+Don't let terms like “de-structuring” and tricky looking arrow functions scare you away. Es6 is easier and friendlier than you think! And you don’t need to know all of it.
+
+In 2.5 hours we will be covering 10 essential and practical topics which you need to know to start building a deeper foundation for writing universal modern JavaScript.
 
 ## Reference
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+This slidedeck was built using  Spectacle[https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
 
 ## Development
 
