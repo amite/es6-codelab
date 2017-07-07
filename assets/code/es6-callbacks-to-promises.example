@@ -1,0 +1,17 @@
+function getCompanyFromOrderId(orderId){
+  getOrder(orderId)
+  .then(function(order){
+    return getUser(order.userId)
+  })
+  .then(function(user){
+    return getCompany(user.companyId)
+  })
+  .then(function(company) {
+    // do something with company
+  })
+  .catch(function(err) {
+    // handle error
+  })
+}
+
+// http://bit.ly/es6-callbacks-to-promises

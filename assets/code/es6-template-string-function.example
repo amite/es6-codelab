@@ -1,0 +1,7 @@
+export default products => `
+    <ul>
+    ${products.map(product => `
+        <li>${product.name} ${product.price}</li>
+    `).join("")}
+    </ul>
+`

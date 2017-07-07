@@ -1,0 +1,17 @@
+
+const wishListFromLocalStorage = [
+  {name: 'Jeans', price:80, category: 'clothes'},
+  {name: 'Cards', price: 5, category: 'games'},
+  {name: 'iPhone', price: 649, category: 'electronics'}
+]
+
+const itemsInCart = [
+  {name: 'Freakonomics', price: 30, category: 'books'},
+  {name: 'Handmaid\'s tale', price: 435, category: 'books'},
+  {name: 'iPhone', price: 649, category: 'electronics'},
+  {name: 'Sauce Pan', price: 100, category: 'housewares'}
+]
+
+const getPrices = (products) => products.map(product => product.price)
+
+const allItemPrices = [...getPrices(wishListFromLocalStorage), ...getPrices(itemsInCart)]

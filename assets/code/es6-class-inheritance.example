@@ -1,0 +1,14 @@
+class ProductInWareHouse extends Product {
+  
+  constructor(name, price, category, stock = 0) {
+    super(name, price, category)
+    this._stock = stock
+  }
+  
+  hasInventory() {
+    return this._stock > 0
+  }
+  
+}
+
+let jeans = new ProductInWareHouse('Jeans', 80, 'clothes', 19)

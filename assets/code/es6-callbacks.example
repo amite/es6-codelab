@@ -1,0 +1,9 @@
+function getCompanyFromOrderId(orderId){
+  getOrder(orderId, function(order){
+    getUser(order.userId, function(user) {
+      getCompany(user.companyId, function(company) {
+        // do something with company
+      })
+    })
+  })
+}

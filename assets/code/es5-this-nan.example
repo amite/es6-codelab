@@ -1,0 +1,18 @@
+var monsoonSale = {
+    name: "Monsoon Sale",
+    discount: 10,
+    applyDiscount: function (products) {
+      products.map( function (product) {
+        var discountedPrice = product.price - (product.price * (this.discount/100))
+        console.log("It's " + this.name + "! So " + product.name + " now costs " + discountedPrice)
+      })
+    }
+}
+
+var products = [ 
+  { name: "Top grade Umbrella", price: 340 }, 
+  { name: "Simple Raincoat", price: 440 } 
+]
+
+monsoonSale.applyDiscount(products)
+// http://bit.ly/es5-monsoon-sale

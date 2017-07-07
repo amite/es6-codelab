@@ -1,0 +1,15 @@
+//  kick off multiple promises in parallel 
+async function showUsersAndRepos(handle) {
+  const userPromise =  axios.get(`${GitHubApiURL}/users/${handle}`)
+  const repoPromise =  axios.get(`${GitHubApiURL}/users/${handle}/repos`)
+
+  const [user, repos] = await Promise.all([
+    userPromise,
+    repoPromise
+  ])
+
+  console.log(user.data.name)
+  console.log(`${repos.data.length} repos`)
+}
+
+showUsersAndRepos('amite')

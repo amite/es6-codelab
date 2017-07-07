@@ -1,0 +1,6 @@
+// sign up at the gym
+const newMember = { name: "Shirley", age: "23", height: 5.4, weight: 63  }
+
+let update = { weight: 61, grade: 'b+' }
+
+// how do I get an updated record for the customer?

@@ -1,0 +1,5 @@
+$.getJSON('https://jsonplaceholder.typicode.com/posts/1', function(post) {
+  $.getJSON('https://jsonplaceholder.typicode.com/users/' + post.userId, function(user) {
+    console.log(post)
+  })
+})

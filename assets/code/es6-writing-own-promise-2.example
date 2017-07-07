@@ -1,0 +1,15 @@
+
+function getUser(userId) {
+  return new Promise( (resolve, reject) => {
+    if(true) {
+      resolve({ username: 'amite', isAuthenticated: true })
+    } else {
+      reject(`couldn't get user from api`)
+    }
+  })
+}
+
+getUser(1)
+  .then( user => console.log(user) )
+  .catch( (err) => console.log(err) )
+

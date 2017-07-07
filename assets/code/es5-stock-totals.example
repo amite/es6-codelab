@@ -1,0 +1,12 @@
+var stockTotals = []
+
+for(var i = 0; i < inventoryItems.length; i++) {
+  stockTotals.push(
+    {
+      'itemName': inventoryItems[i].name,
+      'itemPrice': parseFloat(inventoryItems[i].price.slice(1), 10) * inventoryItems[i].qty,
+    }
+  )
+}
+
+console.log(stockTotals)

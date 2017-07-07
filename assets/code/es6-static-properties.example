@@ -1,0 +1,23 @@
+class Product {
+  
+  static EXPENSIVE_LIMIT = 20.00
+  
+  constructor(name, price, category = "") {
+    this._name = name
+    this._price = price
+    this._category = category
+  }
+  
+  isExpensive() {
+    return this._price > this.constructor.EXPENSIVE_LIMIT
+  }
+  
+  get price() {
+    return `$${(this._price).toFixed(2)}`
+  }
+  
+  set price(newPrice) {
+    this._price = newPrice
+  }
+  
+}

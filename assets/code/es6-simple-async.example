@@ -1,0 +1,6 @@
+const getPosts = async () => {
+  const posts = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=10")
+  console.log(posts.data)
+}
+
+getPosts()

@@ -1,0 +1,10 @@
+async function showUsersAndRepos(handle) {
+  const userPromise =  axios.get(`${GitHubApiURL}/users/${handle}`)
+  const repoPromise =  axios.get(`${GitHubApiURL}/users/${handle}/repos`)
+
+  const user = await userPromise
+  const repos = await repoPromise
+
+  console.log(user.data.name)
+  console.log(`${repos.data.length} repos`)
+}

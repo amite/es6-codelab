@@ -1,0 +1,18 @@
+var customer = {  
+   firstName: 'Sheila',
+   lastName: 'Rowbattam',
+   fullName: function() {
+     console.log(this === customer); // => true
+     function getfullName() {
+       // this is window or undefined in strict mode
+       console.log(this === customer); // => false
+       return this.firstName + this.lastName;
+     }
+     return getfullName();
+   }
+};
+
+
+console.log(customer.fullName()) // what will we get?
+
+// http://bit.ly/es5-this-bug

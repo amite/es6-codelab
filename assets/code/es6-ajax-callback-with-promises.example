@@ -1,0 +1,13 @@
+const res = fetch(
+  'https://jsonplaceholder.typicode.com/posts/1'
+).then( res => res.json() )
+
+function successCallback(value) {
+  console.log(`we got back ${value}`)
+}
+
+function failureCallback(err) {
+  console.error(`we got back ${err}`)
+}
+
+res.then(successCallback, failureCallback)

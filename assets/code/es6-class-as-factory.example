@@ -1,0 +1,15 @@
+const products = [
+  {name: 'Jeans', price:80, category: 'clothes'},
+  {name: 'Cards', price: 5, category: 'games'},
+  {name: 'iPhone', price: 649, category: 'electronics'},
+  {name: 'Freakonomics', price: 30, category: 'books'},
+  {name: 'Handmaid\'s tale', price: 435, category: 'books'},
+  {name: 'iPhone', price: 649, category: 'electronics'},
+  {name: 'Sauce Pan', price: 100, category: 'housewares'}
+]
+
+const makeNewProduct = (product) => new Product(product.name, product.price, product.category)
+
+const newProducts = products.map(makeNewProduct)
+
+console.log(newProducts.map( p => p.price))

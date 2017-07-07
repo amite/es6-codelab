@@ -1,0 +1,12 @@
+// Default all the things
+function createElement (tag = 'div', {
+  content = 'Very default',
+  classNames = ['module-text', 'special']
+} = {}) {
+  const element = document.createElement(tag);
+  const text = document.createTextNode(content);
+  element.classList.add(...classNames);
+  
+  element.appendChild(text);
+  return element;
+}

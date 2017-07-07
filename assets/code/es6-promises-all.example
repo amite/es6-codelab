@@ -1,0 +1,22 @@
+var validateCreditCard = new Promise((resolve, reject) => { 
+  setTimeout(resolve, 1000, 'valid'); 
+});
+
+var contactMerchant = new Promise((resolve, reject) => { 
+  setTimeout(resolve, 2000, 'contacted'); 
+});
+
+var checkAccountBalance = new Promise((resolve, reject) => {
+  setTimeout(resolve, 3000, 'balance exists');
+});
+
+var chargeCreditCard = new Promise((resolve, reject) => {
+  setTimeout(resolve, 4000, 'charging credit card');
+});
+
+Promise.all([validateCreditCard, contactMerchant, checkAccountBalance, chargeCreditCard])
+.then(values => { 
+  console.log(values);
+}).catch(reason => {
+  console.log(reason)
+});

@@ -1,0 +1,8 @@
+const user = {
+  name: '<Enter Your name here>',
+  active: true
+}
+
+// const userState = 
+
+// '<username> is active / <username> is inactive '

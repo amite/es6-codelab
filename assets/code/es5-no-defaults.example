@@ -1,0 +1,30 @@
+function createElement (tag, config) {
+  if(tag === undefined) {
+    tag = 'div'
+  }
+  
+  if(config === undefined) {
+    config = {}
+  }
+
+  const element = document.createElement(tag);
+  
+  if(config.content === undefined) {
+    config.content = 'default content'
+  }
+  
+  const text = document.createTextNode(config.content);
+  
+  let classNames = config.classNames;
+
+  if (classNames === undefined) {
+    classNames = ['default'];
+  }
+  
+  element.classList.add(...classNames)
+  element.appendChild(text);
+
+  return element;
+}
+
+// http://bit.ly/es5-no-defaults

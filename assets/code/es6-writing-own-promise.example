@@ -1,0 +1,3 @@
+let userPromise = Promise.resolve({ username: 'amite', isAuthenticated: true })
+
+userPromise.then( user => console.log(user) )

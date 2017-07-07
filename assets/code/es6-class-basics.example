@@ -1,0 +1,8 @@
+class Product {}
+
+var product = new Product()
+
+console.log(typeof Product)
+console.log(product instanceof Product)
+
+// http://bit.ly/es6-class-fundamentals

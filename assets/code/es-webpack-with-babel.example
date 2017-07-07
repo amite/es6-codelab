@@ -1,0 +1,27 @@
+module.exports = {
+  entry: './index.js',
+  context: resolve(`${__dirname}/src`),
+  output: {
+    path: resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  },
+  devtool: 'source-map',
+  devServer: {
+    contentBase: join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
+    hot: true
+  }
+};
